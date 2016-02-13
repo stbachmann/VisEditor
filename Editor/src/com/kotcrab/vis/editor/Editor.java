@@ -60,7 +60,6 @@ import com.kotcrab.vis.ui.widget.file.SingleFileChooserListener;
 import com.kotcrab.vis.ui.widget.tabbedpane.Tab;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPaneAdapter;
 import com.kotcrab.vis.ui.widget.tabbedpane.TabbedPaneListener;
-import org.lwjgl.glfw.GLFW;
 
 import java.lang.reflect.Field;
 
@@ -449,7 +448,7 @@ public class Editor extends ApplicationAdapter {
 			newTitle = "VisEditor";
 		else
 			newTitle = "VisEditor - " + tab.getTabTitle();
-		GLFW.glfwSetWindowTitle(GLFW.glfwGetCurrentContext(), newTitle);
+		Gdx.graphics.setTitle(newTitle);
 
 		tabContentTable.clear();
 
