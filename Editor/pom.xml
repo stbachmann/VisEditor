@@ -42,7 +42,7 @@
 
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
-            <artifactId>gdx-backend-lwjgl</artifactId>
+            <artifactId>gdx-backend-lwjgl3</artifactId>
         </dependency>
 
         <dependency>
@@ -170,7 +170,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.kotcrab.vis.editor.ui.EditorFrame</mainClass>
+                            <mainClass>com.kotcrab.vis.editor.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Build-Timestamp>${build.ci.timestamp}</Build-Timestamp>
@@ -205,7 +205,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <mainClass>com.kotcrab.vis.editor.ui.EditorFrame</mainClass>
+                    <mainClass>com.kotcrab.vis.editor.Main</mainClass>
                 </configuration>
             </plugin>
 
