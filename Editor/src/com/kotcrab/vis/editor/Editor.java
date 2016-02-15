@@ -117,7 +117,7 @@ public class Editor extends ApplicationAdapter {
 
 		Log.debug("Starting loading");
 
-		GLFWIconSetter.newInstance().setIcon("/com/kotcrab/vis/editor/icon.ico");
+		GLFWIconSetter.newInstance().setIcon("/com/kotcrab/vis/editor/icon.ico", "/com/kotcrab/vis/editor/icon.png");
 
 		Assets.load();
 

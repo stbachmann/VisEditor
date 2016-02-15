@@ -21,13 +21,18 @@ import com.sun.jna.platform.unix.X11;
 
 /** @author Kotcrab */
 public class PlatformUtils {
-	public static boolean isX11 () {
+	private static boolean x11 = false;
+
+	static {
 		try {
 			Native.loadLibrary("X11", X11.class);
-			return true;
+			x11 = true;
 		} catch (UnsatisfiedLinkError e) {
-			return false;
+			x11 = false;
 		}
+	}
 
+	public static boolean isX11 () {
+		return x11;
 	}
 }
